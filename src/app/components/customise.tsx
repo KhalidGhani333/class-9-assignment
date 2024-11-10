@@ -21,7 +21,7 @@ const Customise = () => {
        </div>
        
        <button className='w-[180px] h-[63px] p-5 gap-[10px]  py-[20px] px-[40px] rounded-lg bg-[#4F9CF9] hover:bg-[#4F9CF9] '>
-          <p className='flex items-center gap-2 text-lg font-medium leading-[23px] tracking-[-2%] text-left text-white'>let's Go <FaArrowRight /></p></button>
+          <p className='flex items-center gap-2 text-lg font-medium leading-[23px] tracking-[-2%] text-left text-white'>let &apos;s Go <FaArrowRight /></p></button>
        </div>
         <div className='w-[714px] h-[532.09px] gap-1 bg-[#C4DEFD]'></div>
           </div>    

@@ -2,6 +2,7 @@
 import React from 'react'
 import Section from './section'
 import { FaArrowRight } from 'react-icons/fa'
+import Image from 'next/image'
 
 const Demo = () => {
   return (
@@ -17,7 +18,7 @@ const Demo = () => {
   buttonColor="#FF6347"
   buttonHoverColor="#FF4500"
   contentWidth="w-full"
-  image={<img src="/path/to/image.jpg" alt="Team collaboration" />}
+  image={<Image src="/path/to/image.jpg" alt="Team collaboration" />}
 />
 
 
