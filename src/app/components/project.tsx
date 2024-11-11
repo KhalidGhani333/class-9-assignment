@@ -1,5 +1,6 @@
 
 import React from "react"
+import Section from "./section";
 import { FaArrowRight } from 'react-icons/fa'
 import {Inter} from "next/font/google"
 import Image from "next/image";
@@ -14,8 +15,26 @@ const Project = () => {
   return (
     <>
     <div>
-      <div className='w-[1920px] h-[1588px]  py-[140px] px-[220px] flex flex-col gap-[100px]'>
-       <div className={`w-[1480px] h-[547px] flex items-center ${inter.className} gap-[60px] `}>
+          {/* Achived by Props */}
+      <Section
+      mainContainerWidth = "w-[1920px]"
+      mainContainerHeight = "h-[700px]"
+      paddingX="px-[220px]"
+      paddingY="py-[140px]"
+      backgroundColor="bg-[#FFFFFF]"
+      containerWidth="w-[632px]"
+      containerHeight="h-[411px]"
+      title="Project Management"
+      description="Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note."
+      buttonText="Get Started "
+      innerContainerWidth="w-[824px]"
+      innerContainerHight="h-[549px]"
+      hcolor="text-[#212529]"
+      pcolor="text-[#212529]"
+    />
+    
+      <div className='w-[1920px] h-[900px] 1588  py-[140px] px-[220px] flex flex-col gap-[100px]'>
+       {/* <div className={`w-[1480px] h-[547px] flex items-center ${inter.className} gap-[60px] `}>
        <div className='w-[672px] h-[411px]  gap-[60px] '>
         <div className="w-[700px] h-[288px] gap-6">
           <h1 className='w-[672px] h-[174px] text-[72px] font-bold leading-[87.14px] tracking-[-2%] text-left text-[#212529]' >Project Management</h1>
@@ -28,7 +47,7 @@ const Project = () => {
        </div>
        
         <div className='w-[824px] h-[549px] gap-1 bg-[#C4DEFD]'></div>
-          </div>  
+          </div>   */}
 
 
         <div className={`w-[1480px] h-[661px] flex items-center ${inter.className} flex flex-row-reverse gap-[100px]`}>
@@ -40,21 +59,17 @@ const Project = () => {
            </div>
        <div>
        <button className='w-[196px] h-[63px] py-[20px] px-[40px] flex gap-[10px]  rounded-md bg-[#4F9CF9]  '>
-          <p className='flex items-center gap-2 text-lg font-medium leading-[23px] tracking-[-2%] text-left text-white'>Try it now<FaArrowRight /></p></button>
+          <p className='flex items-center gap-2 text-lg font-medium leading-[23px] tracking-[-2%] text-left text-white'>Try it now <FaArrowRight /></p></button>
        </div>
        </div>
-       
         <div className='w-[710px] h-[661px] gap-1 '>
-       
             <Image src={image} alt={"picture"}  />
         </div>
           </div>
+
           </div>  
-  
-
-
-
       </div>  
+
       </>
   )
 }

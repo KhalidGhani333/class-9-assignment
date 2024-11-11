@@ -1,67 +1,77 @@
 
-
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { Inter } from 'next/font/google';
-import { IconType } from 'react-icons';
+
 
 const inter = Inter({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
-type SectionProps = {
+
+
+//  props interface
+interface SectionProps {
+  mainContainerWidth?:string;
+  mainContainerHeight?:string;
+  paddingX?: string;
+  paddingY?: string;
+  backgroundColor?: string;
+  containerWidth?: string;
+  containerHeight?: string;
   title: string;
   description: string;
   buttonText: string;
-  buttonIcon: IconType;
-  backgroundColor?: string;
-  containerPadding?: string;
-  containerMargin?: string;
-  buttonColor?: string;
-  buttonHoverColor?: string;
-  contentWidth?: string;
-  image?: React.ReactNode;
-};
+  innerContainerWidth:string;
+  innerContainerHight:string;
+  hcolor?:string;
+  pcolor?:string;
+  style?:string;
+}
 
 const Section = ({
-  title,
-  description,
-  buttonText,
-  buttonIcon: ButtonIcon,
-  backgroundColor = '#043873',
-  containerPadding = 'py-[140px] px-[220px]',
-  containerMargin = '',
-  buttonColor = '#4F9CF9',
-  buttonHoverColor = '#4D9CFC',
-  contentWidth = 'w-[656px]',
-  image,
+  mainContainerWidth = "",
+  mainContainerHeight = "",
+  paddingX = "",
+  paddingY = "",
+  backgroundColor = "",
+  containerWidth = "",
+  containerHeight = "",
+  title = "",
+  description = "",
+  buttonText = "",
+  innerContainerWidth="",
+  innerContainerHight="",
+  hcolor = "",
+  pcolor = "",
+  style = "",
+  
 }: SectionProps) => {
+
   return (
-    <div
-      className={`w-screen h-[829px] flex items-center ${containerPadding} ${containerMargin}`}
-      style={{ backgroundColor }}
-    >
-      <div className={`${contentWidth} flex flex-col gap-[160px] ${inter.className}`}>
-        <div className="flex flex-col gap-[24px]">
-          <h2 className="text-[64px] font-bold leading-[77.45px] tracking-[-2%] text-left text-white">
+    <div className={`${mainContainerWidth} ${mainContainerHeight} ${paddingY} ${paddingX} ${style} flex items-center ${backgroundColor}`}>
+
+      <div className={`${containerWidth} ${containerHeight} ${inter.className} flex flex-col gap-[60px] justify-center`}>
+        
+        <div className="flex flex-col gap-6">
+          <h2 className={`text-[64px] font-bold leading-tight  ${hcolor}`}>
             {title}
           </h2>
-          <p className="pt-6 text-lg font-normal leading-[30px] tracking-[-2%] text-left text-white">
+          <p className={`text-lg  ${pcolor}`}>
             {description}
           </p>
         </div>
-        <button
-          className="w-[230px] h-[63px] flex items-center justify-center gap-2 rounded-lg text-lg font-medium leading-[23px] tracking-[-2%] text-white"
-          style={{ backgroundColor: buttonColor }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = buttonHoverColor)}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = buttonColor)}
-        >
-          {buttonText} {ButtonIcon && <ButtonIcon />}
+        
+       
+        <button className="flex items-center justify-center gap-2 w-[230px] h-[63px] mt-6 rounded-lg bg-[#4F9CF9] hover:bg-[#4F9CF9] text-lg font-medium text-white">
+          {buttonText} <FaArrowRight />
         </button>
+
       </div>
-      <div className="w-[824px] h-[549px] bg-[#C4DEFD]">
-        {image}
-      </div>
+      
+      <div className={`${innerContainerWidth} ${innerContainerHight} gap-1 bg-[#C4DEFD]`}></div>
+
     </div>
   );
 };

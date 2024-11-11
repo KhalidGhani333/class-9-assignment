@@ -1,5 +1,6 @@
 
 import React from "react"
+import Section from "./section";
 import { FaArrowRight } from 'react-icons/fa'
 import {Inter} from "next/font/google"
 
@@ -12,7 +13,7 @@ const inter = Inter({
 const Customise = () => {
   return (
     <>
-      <div className='w-[1920px]  h-[812.09px] py-[140px] px-[220px] flex  flex-row-reverse items-center gap-[98px] bg-[#FFFFFF]'>
+      {/* <div className='w-[1920px]  h-[812.09px] py-[140px] px-[220px] flex  flex-row-reverse items-center gap-[98px] bg-[#FFFFFF]'>
        <div className={`w-[669px] h-[411px] ${inter.className} flex flex-col gap-[60px] `}>
        <div className='w-[669px] h-[288px] gap-[24px] '>
           <h2 className='w-[669px] h-[174px] text-[72px] font-bold leading-[87.14px] tracking-[-2%] text-left text-[#212529]' >Customise it
@@ -25,7 +26,28 @@ const Customise = () => {
        </div>
         <div className='w-[714px] h-[532.09px] gap-1 bg-[#C4DEFD]'></div>
           </div>    
-  
+   */}
+
+       {/* Achieved by Props */}
+
+       <Section
+      mainContainerWidth = "w-[1920px]"
+      mainContainerHeight = "h-[812.09px]"
+      paddingX="px-[220px]"
+      paddingY="py-[140px]"
+      backgroundColor="bg-[#FFFFFF]"
+      containerWidth="w-[667px]"
+      containerHeight="h-[411px]"
+      title="Customise it to your needs"
+      description="Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API."
+      buttonText="Let&apos;s Go "
+      innerContainerWidth="w-[714px]"
+      innerContainerHight="h-[532.09px]"
+      hcolor="text-[#212529]"
+      pcolor= "text-[#212529]"
+      style="flex-row-reverse gap-[98px]"
+      
+    />
       </>
   )
 }
